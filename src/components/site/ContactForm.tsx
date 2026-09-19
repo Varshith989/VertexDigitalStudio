@@ -23,12 +23,26 @@ export const enquirySchema = z.object({
 export type EnquiryValues = z.infer<typeof enquirySchema>;
 
 /**
- * Submission handler. Swap this out later to send to an email service,
- * Lovable Cloud, a CRM or a webhook — the form UI does not need to change.
+ * Delivery: opens WhatsApp with the enquiry pre-filled so every enquiry
+ * reaches the founder directly — no backend required. The message is
+ * built from the validated form values.
  */
 async function submitEnquiry(values: EnquiryValues): Promise<void> {
-  await new Promise((r) => setTimeout(r, 600));
-  console.info("[Vertex] Project enquiry captured:", values);
+  const lines = [
+    "New project enquiry — Vertex Digital Studio",
+    "",
+    `Name: ${values.fullName}`,
+    `Email: ${values.email}`,
+    `WhatsApp: ${values.whatsapp}`,
+  ];
+  if (values.company) lines.push(`Business: ${values.company}`);
+  lines.push(`Website type: ${values.websiteType}`);
+  if (values.budget) lines.push(`Budget: ${values.budget}`);
+  lines.push("", `Details: ${values.details}`);
+
+  const url = `https://wa.me/918317646088?text=${encodeURIComponent(lines.join("\n"))}`;
+  window.open(url, "_blank", "noopener,noreferrer");
+  await new Promise((r) => setTimeout(r, 400));
 }
 
 const fieldClass =
@@ -45,7 +59,7 @@ function Field({
   label: string;
   htmlFor: string;
   required?: boolean;
-  error?: string;
+  error?: string | undefined;
   children: ReactNode;
   className?: string;
 }) {
@@ -96,7 +110,8 @@ export function ContactForm() {
         <CheckCircle2 className="size-12 text-success" aria-hidden="true" />
         <p className="mt-6 font-display text-2xl font-bold">Thanks!</p>
         <p className="mt-2 max-w-sm text-muted-foreground">
-          Your project enquiry has been received. We'll get back to you soon.
+          WhatsApp has opened with your enquiry pre-filled — just press send and we'll get back
+          to you soon.
         </p>
         <button
           type="button"
