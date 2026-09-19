@@ -45,7 +45,7 @@ function Field({
   label: string;
   htmlFor: string;
   required?: boolean;
-  error?: string;
+  error?: string | undefined;
   children: ReactNode;
   className?: string;
 }) {
