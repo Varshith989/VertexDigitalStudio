@@ -12,7 +12,7 @@ export const site = {
   whatsappDisplay: "+91 83176 46088",
   whatsappUrl: "https://wa.me/918317646088",
   email: "reddyvarshith122@gmail.com",
-  linkedinUrl: "https://www.linkedin.com/in/varshith-reddy-b2914b23/",
+  linkedinUrl: "https://www.linkedin.com/in/varshith-reddy-b2914b23a",
   githubHandle: "Varshith989",
   githubUrl: "https://github.com/Varshith989",
 };
@@ -33,8 +33,6 @@ export const services = [
     title: "Landing Pages",
     description:
       "High-impact single-page websites for products, services, campaigns and businesses.",
-    priceLabel: "Starting from",
-    price: "₹5,000",
     cta: "Get Started",
   },
   {
@@ -42,8 +40,6 @@ export const services = [
     icon: "Globe",
     title: "Starter Websites",
     description: "Professional websites for individuals and small businesses getting online.",
-    priceLabel: "Starting from",
-    price: "₹10,000",
     cta: "Get Started",
   },
   {
@@ -52,8 +48,6 @@ export const services = [
     title: "Business Websites",
     description:
       "Multi-page websites designed to establish a strong and professional online presence.",
-    priceLabel: "Starting from",
-    price: "₹15,000",
     cta: "Build My Website",
   },
   {
@@ -62,8 +56,6 @@ export const services = [
     title: "Portfolio Websites",
     description:
       "Modern personal websites for professionals, freelancers, creators and personal brands.",
-    priceLabel: "Starting from",
-    price: "₹8,000",
     cta: "Build My Portfolio",
   },
   {
@@ -71,8 +63,6 @@ export const services = [
     icon: "ShoppingBag",
     title: "E-commerce Websites",
     description: "Modern online stores for businesses that want to sell products online.",
-    priceLabel: "Pricing",
-    price: "Custom Pricing",
     cta: "Discuss E-commerce",
   },
   {
@@ -80,8 +70,6 @@ export const services = [
     icon: "LayoutDashboard",
     title: "Custom Web Applications",
     description: "Advanced websites, dashboards, portals and custom digital solutions.",
-    priceLabel: "Pricing",
-    price: "₹20,000+",
     cta: "Discuss Your Idea",
   },
 ] as const;

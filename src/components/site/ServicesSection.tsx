@@ -17,13 +17,13 @@ export function ServiceCard({ service }: { service: Service }) {
       <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
         {service.description}
       </p>
-      <div className="mt-7 flex items-end justify-between gap-4 border-t border-border pt-5">
-        <div>
-          <p className="text-[0.7rem] uppercase tracking-[0.14em] text-muted-foreground">
-            {service.priceLabel}
-          </p>
-          <p className="font-display text-lg font-bold text-foreground">{service.price}</p>
-        </div>
+      <div className="mt-7 flex items-center justify-between gap-4 border-t border-border pt-5">
+        <a
+          href="#pricing"
+          className="text-xs font-medium text-muted-foreground transition-colors hover:text-brand"
+        >
+          View Pricing
+        </a>
         <a
           href="#contact"
           className="inline-flex items-center gap-1 text-sm font-semibold text-brand transition-colors hover:text-foreground"
