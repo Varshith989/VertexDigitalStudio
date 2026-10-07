@@ -6,9 +6,16 @@ export function Footer() {
     <footer className="border-t border-border bg-surface/40">
       <div className="container-site grid gap-12 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <p className="font-display text-sm font-extrabold tracking-[0.18em]">
-            VERTEX<span className="text-brand"> DIGITAL</span> STUDIO
-          </p>
+          <div className="flex items-center gap-3">
+            <img
+              src="/logo-icon.png"
+              alt="Vertex Digital Studio Logo"
+              className="size-8 sm:size-9 object-contain drop-shadow-[0_0_12px_rgba(124,58,237,0.35)]"
+            />
+            <p className="font-display text-base font-extrabold tracking-[0.16em] sm:text-lg">
+              VERTEX<span className="text-brand"> DIGITAL</span> STUDIO
+            </p>
+          </div>
           <p className="mt-3 text-sm font-medium text-foreground">{site.tagline}</p>
           <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Modern websites and digital experiences for businesses, startups and personal brands.

@@ -48,9 +48,16 @@ export function Navbar() {
       <nav className="container-site flex h-[4.5rem] items-center justify-between" aria-label="Main">
         <a
           href="#top"
-          className="font-display text-sm font-extrabold tracking-[0.18em] text-foreground sm:text-[0.9rem]"
+          className="group flex items-center gap-3 transition-opacity hover:opacity-90"
         >
-          VERTEX<span className="text-brand"> DIGITAL</span> STUDIO
+          <img
+            src="/logo-icon.png"
+            alt="Vertex Digital Studio Logo"
+            className="size-8 sm:size-9 object-contain drop-shadow-[0_0_12px_rgba(124,58,237,0.35)] transition-transform duration-300 group-hover:scale-105"
+          />
+          <span className="font-display text-base font-extrabold tracking-[0.16em] text-foreground sm:text-lg lg:text-xl">
+            VERTEX<span className="text-brand"> DIGITAL</span> STUDIO
+          </span>
         </a>
 
         <ul className="hidden items-center gap-1 lg:flex">
